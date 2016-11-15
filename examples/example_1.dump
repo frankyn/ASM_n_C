@@ -1,0 +1,206 @@
+
+a.out:	file format Mach-O 64-bit x86-64
+
+Disassembly of section __TEXT,__text:
+__text:
+100000e90:	55 	pushq	%rbp
+100000e91:	48 89 e5 	movq	%rsp, %rbp
+100000e94:	89 7d fc 	movl	%edi, -4(%rbp)
+100000e97:	c7 45 f8 00 00 00 00 	movl	$0, -8(%rbp)
+100000e9e:	83 7d f8 0a 	cmpl	$10, -8(%rbp)
+100000ea2:	0f 8d 17 00 00 00 	jge	23 <_test_func+2F>
+100000ea8:	8b 45 fc 	movl	-4(%rbp), %eax
+100000eab:	83 c0 02 	addl	$2, %eax
+100000eae:	89 45 fc 	movl	%eax, -4(%rbp)
+100000eb1:	8b 45 f8 	movl	-8(%rbp), %eax
+100000eb4:	83 c0 01 	addl	$1, %eax
+100000eb7:	89 45 f8 	movl	%eax, -8(%rbp)
+100000eba:	e9 df ff ff ff 	jmp	-33 <_test_func+E>
+100000ebf:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ec2:	5d 	popq	%rbp
+100000ec3:	c3 	retq
+100000ec4:	66 66 66 2e 0f 1f 84 00 00 00 00 00 	nopw	%cs:(%rax,%rax)
+100000ed0:	55 	pushq	%rbp
+100000ed1:	48 89 e5 	movq	%rsp, %rbp
+100000ed4:	89 7d fc 	movl	%edi, -4(%rbp)
+100000ed7:	c7 45 f8 00 00 00 00 	movl	$0, -8(%rbp)
+100000ede:	8b 7d fc 	movl	-4(%rbp), %edi
+100000ee1:	89 ff 	movl	%edi, %edi
+100000ee3:	6b ff 0a 	imull	$10, %edi, %edi
+100000ee6:	83 c7 0a 	addl	$10, %edi
+100000ee9:	83 ef 0a 	subl	$10, %edi
+100000eec:	83 c7 0a 	addl	$10, %edi
+100000eef:	89 7d f8 	movl	%edi, -8(%rbp)
+100000ef2:	8b 45 f8 	movl	-8(%rbp), %eax
+100000ef5:	5d 	popq	%rbp
+100000ef6:	c3 	retq
+100000ef7:	66 0f 1f 84 00 00 00 00 00 	nopw	(%rax,%rax)
+100000f00:	55 	pushq	%rbp
+100000f01:	48 89 e5 	movq	%rsp, %rbp
+100000f04:	48 83 ec 20 	subq	$32, %rsp
+100000f08:	48 8d 05 75 00 00 00 	leaq	117(%rip), %rax
+100000f0f:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+100000f16:	89 7d f8 	movl	%edi, -8(%rbp)
+100000f19:	48 89 75 f0 	movq	%rsi, -16(%rbp)
+100000f1d:	48 89 c7 	movq	%rax, %rdi
+100000f20:	e8 35 00 00 00 	callq	53
+100000f25:	bf 0a 00 00 00 	movl	$10, %edi
+100000f2a:	89 45 e8 	movl	%eax, -24(%rbp)
+100000f2d:	e8 9e ff ff ff 	callq	-98 <_test_asm_func>
+100000f32:	48 8d 3d 57 00 00 00 	leaq	87(%rip), %rdi
+100000f39:	89 45 ec 	movl	%eax, -20(%rbp)
+100000f3c:	8b 75 ec 	movl	-20(%rbp), %esi
+100000f3f:	b0 00 	movb	$0, %al
+100000f41:	e8 0e 00 00 00 	callq	14
+100000f46:	31 f6 	xorl	%esi, %esi
+100000f48:	89 45 e4 	movl	%eax, -28(%rbp)
+100000f4b:	89 f0 	movl	%esi, %eax
+100000f4d:	48 83 c4 20 	addq	$32, %rsp
+100000f51:	5d 	popq	%rbp
+100000f52:	c3 	retq
+
+_test_func:
+100000e90:	55 	pushq	%rbp
+100000e91:	48 89 e5 	movq	%rsp, %rbp
+100000e94:	89 7d fc 	movl	%edi, -4(%rbp)
+100000e97:	c7 45 f8 00 00 00 00 	movl	$0, -8(%rbp)
+100000e9e:	83 7d f8 0a 	cmpl	$10, -8(%rbp)
+100000ea2:	0f 8d 17 00 00 00 	jge	23 <_test_func+2F>
+100000ea8:	8b 45 fc 	movl	-4(%rbp), %eax
+100000eab:	83 c0 02 	addl	$2, %eax
+100000eae:	89 45 fc 	movl	%eax, -4(%rbp)
+100000eb1:	8b 45 f8 	movl	-8(%rbp), %eax
+100000eb4:	83 c0 01 	addl	$1, %eax
+100000eb7:	89 45 f8 	movl	%eax, -8(%rbp)
+100000eba:	e9 df ff ff ff 	jmp	-33 <_test_func+E>
+100000ebf:	8b 45 fc 	movl	-4(%rbp), %eax
+100000ec2:	5d 	popq	%rbp
+100000ec3:	c3 	retq
+100000ec4:	66 66 66 2e 0f 1f 84 00 00 00 00 00 	nopw	%cs:(%rax,%rax)
+
+_test_asm_func:
+100000ed0:	55 	pushq	%rbp
+100000ed1:	48 89 e5 	movq	%rsp, %rbp
+100000ed4:	89 7d fc 	movl	%edi, -4(%rbp)
+100000ed7:	c7 45 f8 00 00 00 00 	movl	$0, -8(%rbp)
+100000ede:	8b 7d fc 	movl	-4(%rbp), %edi
+100000ee1:	89 ff 	movl	%edi, %edi
+100000ee3:	6b ff 0a 	imull	$10, %edi, %edi
+100000ee6:	83 c7 0a 	addl	$10, %edi
+100000ee9:	83 ef 0a 	subl	$10, %edi
+100000eec:	83 c7 0a 	addl	$10, %edi
+100000eef:	89 7d f8 	movl	%edi, -8(%rbp)
+100000ef2:	8b 45 f8 	movl	-8(%rbp), %eax
+100000ef5:	5d 	popq	%rbp
+100000ef6:	c3 	retq
+100000ef7:	66 0f 1f 84 00 00 00 00 00 	nopw	(%rax,%rax)
+
+_main:
+100000f00:	55 	pushq	%rbp
+100000f01:	48 89 e5 	movq	%rsp, %rbp
+100000f04:	48 83 ec 20 	subq	$32, %rsp
+100000f08:	48 8d 05 75 00 00 00 	leaq	117(%rip), %rax
+100000f0f:	c7 45 fc 00 00 00 00 	movl	$0, -4(%rbp)
+100000f16:	89 7d f8 	movl	%edi, -8(%rbp)
+100000f19:	48 89 75 f0 	movq	%rsi, -16(%rbp)
+100000f1d:	48 89 c7 	movq	%rax, %rdi
+100000f20:	e8 35 00 00 00 	callq	53
+100000f25:	bf 0a 00 00 00 	movl	$10, %edi
+100000f2a:	89 45 e8 	movl	%eax, -24(%rbp)
+100000f2d:	e8 9e ff ff ff 	callq	-98 <_test_asm_func>
+100000f32:	48 8d 3d 57 00 00 00 	leaq	87(%rip), %rdi
+100000f39:	89 45 ec 	movl	%eax, -20(%rbp)
+100000f3c:	8b 75 ec 	movl	-20(%rbp), %esi
+100000f3f:	b0 00 	movb	$0, %al
+100000f41:	e8 0e 00 00 00 	callq	14
+100000f46:	31 f6 	xorl	%esi, %esi
+100000f48:	89 45 e4 	movl	%eax, -28(%rbp)
+100000f4b:	89 f0 	movl	%esi, %eax
+100000f4d:	48 83 c4 20 	addq	$32, %rsp
+100000f51:	5d 	popq	%rbp
+100000f52:	c3 	retq
+Disassembly of section __TEXT,__stubs:
+__stubs:
+100000f54:	ff 25 b6 00 00 00 	jmpq	*182(%rip)
+100000f5a:	ff 25 b8 00 00 00 	jmpq	*184(%rip)
+Disassembly of section __TEXT,__stub_helper:
+__stub_helper:
+100000f60:	4c 8d 1d a1 00 00 00 	leaq	161(%rip), %r11
+100000f67:	41 53 	pushq	%r11
+100000f69:	ff 25 91 00 00 00 	jmpq	*145(%rip)
+100000f6f:	90 	nop
+100000f70:	68 00 00 00 00 	pushq	$0
+100000f75:	e9 e6 ff ff ff 	jmp	-26 <__stub_helper>
+100000f7a:	68 0e 00 00 00 	pushq	$14
+100000f7f:	e9 dc ff ff ff 	jmp	-36 <__stub_helper>
+Disassembly of section __TEXT,__cstring:
+__cstring:
+100000f84:	68 65 6c 6c 6f 	pushq	$1869376613
+100000f89:	20 77 6f 	andb	%dh, 111(%rdi)
+100000f8c:	72 6c 	jb	108
+100000f8e:	64 00 74 65 73 	addb	%dh, %fs:115(%rbp)
+100000f93:	74 5f 	je	95
+100000f96:	73 6d 	jae	109
+100000f98:	5f 	popq	%rdi
+100000f99:	66 75 6e 	jne	110
+100000f9d:	20 70 72 	andb	%dh, 114(%rax)
+100000fa0:	69 6e 74 65 64 3a 20 	imull	$540697701, 116(%rsi), %ebp
+100000fa8:	64 0a 00 	orb	%fs:(%rax), %al
+Disassembly of section __TEXT,__unwind_info:
+__unwind_info:
+100000fac:	01 00 	addl	%eax, (%rax)
+100000fae:	00 00 	addb	%al, (%rax)
+100000fb0:	1c 00 	sbbb	$0, %al
+100000fb2:	00 00 	addb	%al, (%rax)
+100000fb4:	00 00 	addb	%al, (%rax)
+100000fb6:	00 00 	addb	%al, (%rax)
+100000fb8:	1c 00 	sbbb	$0, %al
+100000fba:	00 00 	addb	%al, (%rax)
+100000fbc:	00 00 	addb	%al, (%rax)
+100000fbe:	00 00 	addb	%al, (%rax)
+100000fc0:	1c 00 	sbbb	$0, %al
+100000fc2:	00 00 	addb	%al, (%rax)
+100000fc4:	02 00 	addb	(%rax), %al
+100000fc6:	00 00 	addb	%al, (%rax)
+100000fc8:	90 	nop
+100000fca:	00 00 	addb	%al, (%rax)
+100000fcc:	34 00 	xorb	$0, %al
+100000fce:	00 00 	addb	%al, (%rax)
+100000fd0:	34 00 	xorb	$0, %al
+100000fd2:	00 00 	addb	%al, (%rax)
+100000fd4:	54 	pushq	%rsp
+100000fd5:	0f 00 00 	sldtw	(%rax)
+100000fd8:	00 00 	addb	%al, (%rax)
+100000fda:	00 00 	addb	%al, (%rax)
+100000fdc:	34 00 	xorb	$0, %al
+100000fde:	00 00 	addb	%al, (%rax)
+100000fe0:	03 00 	addl	(%rax), %eax
+100000fe2:	00 00 	addb	%al, (%rax)
+100000fe4:	0c 00 	orb	$0, %al
+100000fe6:	01 00 	addl	%eax, (%rax)
+100000fe8:	10 00 	adcb	%al, (%rax)
+100000fea:	01 00 	addl	%eax, (%rax)
+100000fec:	00 00 	addb	%al, (%rax)
+100000fee:	00 00 	addb	%al, (%rax)
+100000ff0:	00 00 	addb	%al, (%rax)
+100000ff2:	00 01 	addb	%al, (%rcx)
+Disassembly of section __DATA,__nl_symbol_ptr:
+__nl_symbol_ptr:
+100001000:	00 00 	addb	%al, (%rax)
+100001002:	00 00 	addb	%al, (%rax)
+100001004:	00 00 	addb	%al, (%rax)
+100001006:	00 00 	addb	%al, (%rax)
+100001008:	00 00 	addb	%al, (%rax)
+10000100a:	00 00 	addb	%al, (%rax)
+10000100c:	00 00 	addb	%al, (%rax)
+10000100e:	00 00 	addb	%al, (%rax)
+Disassembly of section __DATA,__la_symbol_ptr:
+__la_symbol_ptr:
+100001010:	70 0f 	jo	15 <__la_symbol_ptr+11>
+100001012:	00 00 	addb	%al, (%rax)
+100001014:	01 00 	addl	%eax, (%rax)
+100001016:	00 00 	addb	%al, (%rax)
+100001018:	7a 0f 	jp	15 <__la_symbol_ptr+19>
+10000101a:	00 00 	addb	%al, (%rax)
+10000101c:	01 00 	addl	%eax, (%rax)
+10000101e:	00 00 	addb	%al, (%rax)
